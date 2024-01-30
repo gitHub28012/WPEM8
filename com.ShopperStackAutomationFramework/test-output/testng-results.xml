@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-01-30T06:19:54Z" name="Default suite" finished-at="2024-01-30T06:20:05Z" duration-ms="11079">
+    <groups>
+    </groups>
+    <test started-at="2024-01-30T06:19:54Z" name="Default test" finished-at="2024-01-30T06:20:05Z" duration-ms="11079">
+      <class name="com.ShopperStackAutomationFramework.TestScript.LaunchBrowser">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ShopperStackAutomationFramework.TestScript.LaunchBrowser@46b61c56]" started-at="2024-01-30T06:19:54Z" name="setup" finished-at="2024-01-30T06:19:59Z" duration-ms="5759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="login()[pri:0, instance:com.ShopperStackAutomationFramework.TestScript.LaunchBrowser@46b61c56]" started-at="2024-01-30T06:19:59Z" name="login" finished-at="2024-01-30T06:19:59Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ShopperStackAutomationFramework.TestScript.LaunchBrowser@46b61c56]" started-at="2024-01-30T06:19:59Z" name="tearDown" finished-at="2024-01-30T06:20:05Z" duration-ms="5272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.ShopperStackAutomationFramework.TestScript.LaunchBrowser -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
