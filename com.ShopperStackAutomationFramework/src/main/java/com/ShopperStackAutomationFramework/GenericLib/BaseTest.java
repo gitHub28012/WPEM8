@@ -1,8 +1,11 @@
 package com.ShopperStackAutomationFramework.GenericLib;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -10,9 +13,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import com.google.common.io.Files;
+
 public class BaseTest extends FLib implements IAutoConstant {
 
-	WebDriver driver;
+	public WebDriver driver;
 
 	@BeforeClass
 	public void setup() throws IOException {
@@ -39,6 +44,27 @@ public class BaseTest extends FLib implements IAutoConstant {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TimeDuration));
 
 	}
+	public void toTakeScreenshot(String methodName)
+	{
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		
+		File dest = new File("./Screenshot/"+methodName+".Png");
+		try {
+			Files.copy(src, dest);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	@AfterClass
 	public void tearDown() throws InterruptedException
