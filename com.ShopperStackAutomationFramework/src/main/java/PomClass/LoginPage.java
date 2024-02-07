@@ -18,10 +18,10 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//input[@id='Email']")
+	@FindBy(xpath = "//input[@id='Emai']")
 	private WebElement emailTextField;
 
-	@FindBy(xpath = "//input[@id='Pass']")
+	@FindBy(xpath = "//input[@id='Password']")
 	private WebElement passwordTextField;
 
 	@FindBy(xpath = "//span[text()='Login']")

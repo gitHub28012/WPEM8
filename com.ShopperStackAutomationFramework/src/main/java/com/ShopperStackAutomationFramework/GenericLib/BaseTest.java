@@ -17,7 +17,8 @@ import com.google.common.io.Files;
 
 public class BaseTest extends FLib implements IAutoConstant {
 
-	public WebDriver driver;
+	public static WebDriver driver;
+	
 
 	@BeforeClass
 	public void setup() throws IOException {
