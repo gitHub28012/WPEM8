@@ -13,5 +13,7 @@ public interface IAutoConstant {
 	String SCREENSHOTPATH = "./Screenshot/";
 	
 	String EXTENSION = ".Png";
+	
+	String INVALIDSHEETNAME = "Invalid";
 
 }

@@ -18,7 +18,7 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//input[@id='Emai']")
+	@FindBy(xpath = "//input[@id='Email']")
 	private WebElement emailTextField;
 
 	@FindBy(xpath = "//input[@id='Password']")
@@ -46,6 +46,14 @@ public class LoginPage {
 		getEmailTextField().sendKeys(email);
 		getPasswordTextField().sendKeys(password);
 		getLoginButton().click();
+	}
+	
+	public void invalidLoginIntoShopperstack(String email, String password)
+	{
+		getEmailTextField().sendKeys(email);
+		getPasswordTextField().sendKeys(password);
+		getLoginButton().click();
+		getEmailTextField().clear();
 	}
 
 }

@@ -35,6 +35,15 @@ public class FLib {
 		
 	}
 	
+	public int getRowCount(String excelPath, String sheetName) throws EncryptedDocumentException, IOException
+	{
+		FileInputStream fis = new FileInputStream(excelPath);
+		Workbook book = WorkbookFactory.create(fis);
+		Sheet sheet = book.getSheet(sheetName);
+		int count = sheet.getLastRowNum();
+		return count;
+	}
+	
 	
 	
 	

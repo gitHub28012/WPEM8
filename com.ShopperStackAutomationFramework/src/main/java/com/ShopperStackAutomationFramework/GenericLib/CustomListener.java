@@ -19,7 +19,6 @@ public class CustomListener extends BaseTest implements ITestListener {
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
 		String methodName = result.getMethod().getMethodName();
-		toTakeScreenshot(methodName);
 		System.out.println("Screenshot took successfully");
 		
 		

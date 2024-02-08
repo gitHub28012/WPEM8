@@ -11,7 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import com.google.common.io.Files;
 
@@ -20,7 +22,7 @@ public class BaseTest extends FLib implements IAutoConstant {
 	public static WebDriver driver;
 	
 
-	@BeforeClass
+	@BeforeMethod
 	public void setup() throws IOException {
 		FLib lib = new FLib();
 		String browser = lib.getDataFromPropertyFile(PROP_PATH, "Browser");
@@ -45,6 +47,10 @@ public class BaseTest extends FLib implements IAutoConstant {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TimeDuration));
 
 	}
+	
+	
+	
+	
 	public void toTakeScreenshot(String methodName)
 	{
 		TakesScreenshot ts = (TakesScreenshot) driver;
@@ -67,7 +73,7 @@ public class BaseTest extends FLib implements IAutoConstant {
 	
 	
 	
-	@AfterClass
+	@AfterMethod
 	public void tearDown() throws InterruptedException
 	{
 		Thread.sleep(5000);

@@ -5,9 +5,9 @@
     <classes>
       <class name="com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack">
         <methods>
-          <include name="login"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="invalidLogin"/>
         </methods>
       </class> <!-- com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack -->
     </classes>
