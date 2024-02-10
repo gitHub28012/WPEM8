@@ -14,6 +14,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import com.google.common.io.Files;
 
@@ -22,11 +24,11 @@ public class BaseTest extends FLib implements IAutoConstant {
 	public static WebDriver sdriver;
 	public WebDriver driver;
 	
-
+	@Parameters("Browser")
 	@BeforeMethod
-	public void setup() throws IOException {
+	public void setup(@Optional("chrome")String browser) throws IOException {
 		FLib lib = new FLib();
-		String browser = lib.getDataFromPropertyFile(PROP_PATH, "Browser");
+		//String browser = lib.getDataFromPropertyFile(PROP_PATH, "Browser");
 		System.out.println(browser);
 		if (browser.equals("chrome")) {
 			driver = new ChromeDriver();

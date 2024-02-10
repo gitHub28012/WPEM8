@@ -2,6 +2,7 @@ package PomClass;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -18,7 +19,7 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//input[@id='Email']")
+	@FindAll({@FindBy(id="Emai"),@FindBy(xpath = "//input[@id='Email']")})
 	private WebElement emailTextField;
 
 	@FindBy(xpath = "//input[@id='Password']")
