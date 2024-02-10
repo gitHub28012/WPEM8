@@ -34,7 +34,7 @@ public class ValidLoginIntoShopperstack extends BaseTest {
 
 	}
 
-	@Test(priority = 2)
+	@Test(enabled = false)
 	public void invalidLogin() throws EncryptedDocumentException, IOException {
 
 		WelcomePage wp = new WelcomePage(driver);

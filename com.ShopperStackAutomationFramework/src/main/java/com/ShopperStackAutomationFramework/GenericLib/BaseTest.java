@@ -19,14 +19,15 @@ import com.google.common.io.Files;
 
 public class BaseTest extends FLib implements IAutoConstant {
 
-	public static WebDriver driver;
+	public static WebDriver sdriver;
+	public WebDriver driver;
 	
 
 	@BeforeMethod
 	public void setup() throws IOException {
 		FLib lib = new FLib();
 		String browser = lib.getDataFromPropertyFile(PROP_PATH, "Browser");
-
+		System.out.println(browser);
 		if (browser.equals("chrome")) {
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
@@ -37,26 +38,19 @@ public class BaseTest extends FLib implements IAutoConstant {
 			driver.manage().window().maximize();
 		} else {
 			System.out.println("Invalid browser");
-		}
-
-		// launch the browser
+		}		// launch the browser
 		String url = lib.getDataFromPropertyFile(PROP_PATH, "Url");
 		driver.get(url);
-
 		// implicit wait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TimeDuration));
+		sdriver= driver;
 
 	}
 	
-	
-	
-	
 	public void toTakeScreenshot(String methodName)
 	{
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		
+		TakesScreenshot ts = (TakesScreenshot) BaseTest.sdriver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		
 		File dest = new File("./Screenshot/"+methodName+".Png");
 		try {
 			Files.copy(src, dest);
