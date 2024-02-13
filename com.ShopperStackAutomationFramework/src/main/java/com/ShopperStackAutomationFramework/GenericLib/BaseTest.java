@@ -25,7 +25,7 @@ public class BaseTest extends FLib implements IAutoConstant {
 	public WebDriver driver;
 	
 	@Parameters("Browser")
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void setup(@Optional("chrome")String browser) throws IOException {
 		FLib lib = new FLib();
 		//String browser = lib.getDataFromPropertyFile(PROP_PATH, "Browser");
@@ -69,11 +69,11 @@ public class BaseTest extends FLib implements IAutoConstant {
 	
 	
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws InterruptedException
 	{
 		Thread.sleep(5000);
-		driver.quit();
+		//driver.quit();
 	}
 	
 	

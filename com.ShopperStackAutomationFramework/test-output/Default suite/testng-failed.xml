@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack">
+      <class name="com.ShopperStackAutomationFramework.TestScript.LearningAssertion">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="invalidLogin"/>
+          <include name="verifyTitle"/>
         </methods>
-      </class> <!-- com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack -->
+      </class> <!-- com.ShopperStackAutomationFramework.TestScript.LearningAssertion -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-10T05:29:17Z" name="Default suite" finished-at="2024-02-10T05:29:55Z" duration-ms="38322">
+  <suite started-at="2024-02-13T05:40:36Z" name="Default suite" finished-at="2024-02-13T05:40:40Z" duration-ms="4171">
     <groups>
     </groups>
-    <test started-at="2024-02-10T05:29:17Z" name="Default test" finished-at="2024-02-10T05:29:55Z" duration-ms="38322">
-      <class name="com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack@68702e03]" started-at="2024-02-10T05:29:17Z" name="setup" finished-at="2024-02-10T05:29:23Z" duration-ms="5703" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2024-02-13T05:40:36Z" name="Default test" finished-at="2024-02-13T05:40:40Z" duration-ms="4171">
+      <class name="com.ShopperStackAutomationFramework.TestScript.LearningAssertion">
+        <test-method signature="verifyTitle()[pri:0, instance:com.ShopperStackAutomationFramework.TestScript.LearningAssertion@d771cc9]" started-at="2024-02-13T05:40:36Z" name="verifyTitle" description="verifying the title" finished-at="2024-02-13T05:40:40Z" duration-ms="4133" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="login()[pri:1, instance:com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack@68702e03]" started-at="2024-02-10T05:29:23Z" name="login" finished-at="2024-02-10T05:29:50Z" duration-ms="27294" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack@68702e03]" started-at="2024-02-10T05:29:50Z" name="tearDown" finished-at="2024-02-10T05:29:55Z" duration-ms="5297" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.ShopperStackAutomationFramework.TestScript.ValidLoginIntoShopperstack -->
+        </test-method> <!-- verifyTitle -->
+      </class> <!-- com.ShopperStackAutomationFramework.TestScript.LearningAssertion -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

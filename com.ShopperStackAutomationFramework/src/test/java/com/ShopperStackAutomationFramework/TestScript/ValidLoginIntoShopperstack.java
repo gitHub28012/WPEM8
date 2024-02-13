@@ -18,7 +18,7 @@ import PomClass.WelcomePage;
 @Listeners(CustomListener.class)
 public class ValidLoginIntoShopperstack extends BaseTest {
 
-	@Test(priority = 1)
+	@Test(groups = "Smoke")
 	public void login() throws EncryptedDocumentException, IOException {
 		// click on login button
 		WelcomePage wp = new WelcomePage(driver);
@@ -34,7 +34,7 @@ public class ValidLoginIntoShopperstack extends BaseTest {
 
 	}
 
-	@Test(enabled = false)
+	@Test(enabled = false,groups = "Smoke")
 	public void invalidLogin() throws EncryptedDocumentException, IOException {
 
 		WelcomePage wp = new WelcomePage(driver);

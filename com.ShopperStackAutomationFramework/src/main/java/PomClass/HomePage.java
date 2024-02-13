@@ -61,8 +61,9 @@ public class HomePage {
 		getLogoutLink().click();
 	}
 	
-	public void addProductIntocart()
+	public void addProductIntocart() throws InterruptedException
 	{
+		Thread.sleep(10000);
 		getAddToCartProduct().click();
 	}
 

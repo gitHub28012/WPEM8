@@ -11,10 +11,8 @@ import PomClass.HomePage;
 
 public class AddToCart extends BaseTest {
 
-	@Test
-	public void addToCart() throws EncryptedDocumentException, IOException {
-		ValidLoginIntoShopperstack valid = new ValidLoginIntoShopperstack();
-		valid.login();
+	@Test(groups = "Smoke")
+	public void addToCart() throws EncryptedDocumentException, IOException, InterruptedException {
 		
 		HomePage hp = new HomePage(driver);
 		hp.addProductIntocart();

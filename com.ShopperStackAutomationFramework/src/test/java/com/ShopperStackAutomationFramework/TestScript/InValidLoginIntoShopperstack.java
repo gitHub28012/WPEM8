@@ -13,7 +13,7 @@ import PomClass.WelcomePage;
 
 public class InValidLoginIntoShopperstack extends BaseTest {
 
-	@Test
+	@Test(groups = "Functional")
 	public void invalidLogin() throws EncryptedDocumentException, IOException {
 
 		WelcomePage wp = new WelcomePage(driver);
